@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        button{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <form class="row">
+        <div class="col-12">
+            <label for="mat" class="form-label">Número de matricula:</label>
+            <input type="text" name="mat" id="mat" class="form-control">
+        </div>
+        <fieldset>
+            <legend>
+                1° Periodo
+                <div class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                </div>
+            </legend>
+            <div class="col-12">
+                <label for="ipc" class="form-label">IPC</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ipc"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="pf" class="form-label">PF</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="pf" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="lc" class="form-label">Logica Para Computação</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="lc" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="ep" class="form-label">Emprendedorismo</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ep" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="isi" class="form-label">Introdução a computação</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="isi"
+                       class="form-control">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                2° Periodo
+                <div class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                </div>
+            </legend>
+            <div class="col-12">
+                <label for="ed1" class="form-label">Estrutura de Dados I</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ed1"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="pl" class="form-label">Programação Logica</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="pl" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="sd" class="form-label">Sistemas Digitais</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="sd" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="mat1" class="form-label">Matematica I</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="mat1"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="prof" class="form-label">Profissões em Sistemas de Informação</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="prof"
+                       class="form-control">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                3° Periodo
+                <div class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                </div>
+            </legend>
+            <div class="col-12">
+                <label for="ed2" class="form-label">Estrutura de dados II</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ed2"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="aoc" class="form-label">Arquitetura e Organização de Computadores</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="aoc"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="mat2" class="form-label">Matematica II</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="mat2"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="mcc" class="form-label">Matematica para Ciencias da Computação</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="mcc"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="poo1" class="form-label">Programação Orientada a Objetos I</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="poo1"
+                       class="form-control">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                4° Periodo
+                <div class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                </div>
+            </legend>
+            <div class="col-12">
+                <label for="bd1" class="form-label">Banco de Dados I</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="bd1"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="est" class="form-label">Estatistica</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="est"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="so" class="form-label">Sistemas Operacionais</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="so" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="ppi" class="form-label">Programação para Internet</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ppi"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="poo2" class="form-label">Programação Orientada a Objetos 2</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="poo2"
+                       class="form-control">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                5° Periodo
+                <div class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                </div>
+            </legend>
+            <div class="col-12">
+                <label for="bd2" class="form-label">Banco de Dados II</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="bd2"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="mfin" class="form-label">Matematica Financeira</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="mfin"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="redes" class="form-label">Redes de Computadores</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="redes"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="ori" class="form-label">Organização e Recuperação da Informação</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ori"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="ms" class="form-label">Modelagem de Software</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ms" class="form-control">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                6° Periodo
+                <div class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                </div>
+            </legend>
+            <div class="col-12">
+                <label for="ge" class="form-label">Gestão Empresarial</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="ge" class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="otim" class="form-label">Otimização</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="otim"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="SisD" class="form-label">Sistemas Distribuidos</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="SisD"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="cab" class="form-label">Contabilidade</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="cab"
+                       class="form-control">
+            </div>
+            <div class="col-12">
+                <label for="esof" class="form-label">Engenharia de Software</label>
+                <input type="number" value="0" min="0" max="100" step="0.5" name="notas[]" id="esof"
+                       class="form-control">
+            </div>
+        </fieldset>
+
+        <div class="col">
+            <div class="btn btn-primary" id="env">Enviar</div>
+        </div>
+    </form>
+</div>
+</body>
+<script>
+    function esconde(e){
+        nx = e.path[1]
+        while(nx = nx.nextElementSibling){
+            //console.log(nx)
+            if(nx.style.display=='none')
+                nx.style.display='block'
+            else
+                nx.style.display='none'
+        }
+    }
+
+    function enviar(e){
+        l = ['ipc','pf','lc','ep','isi','ed1','pl','sd','mat1','prof',
+             'ed2','aoc','mat2','mcc','poo1','bd1','est','so','ppi','poo2',
+             'bd2','mfin','redes','ori','ms','ge','otim','SisD','cab','esof']
+        mat = document.getElementById('mat').value
+        notas = []
+        l.forEach(key => {
+            notas.push(document.getElementById(key).value)
+        })
+        var aluno = new Object()
+        aluno.matricula = mat
+        aluno.notas = notas
+        //console.log(JSON.stringify(aluno))
+        url = 'http://127.0.0.1:8000/consult?aluno='+JSON.stringify(aluno)
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", url, false);
+        xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+        console.log(xhttp.responseText);
+        
+    }
+    
+    lg = document.querySelectorAll('fieldset legend div')
+    lg.forEach(element => {
+      element.addEventListener("click", esconde);  
+    });
+
+    env = document.getElementById("env")
+    env.addEventListener("click",enviar)
+
+</script>
+</html>
