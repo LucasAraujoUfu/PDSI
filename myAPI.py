@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 import json
+import pandas as pd
+import numpy as np
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -20,10 +22,12 @@ app.add_middleware(
 
 knn = None
 
+knn = KNeighborsClassifier(n_neighbors=3)
+data = Bc()
+knn.fit(data.data, data.target)
+
 @app.get('/train')
 def train():
-    knn = KNeighborsClassifier(n_neighbors=3)
-    data = Bc()
     knn.fit(data.data, data.target)
 
 
@@ -36,5 +40,26 @@ def consult(aluno: str):
 
 
 @app.get('/consultAll')
-def consAll(dataset):
-    return "Acho que de Bom"
+def consAll(dataset:str):
+    if knn == None:
+        return '-1'
+    url = dataset
+    path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+    s = {}
+    try:
+        df = pd.read_csv(path)
+        X = np.array(df)
+        l = []
+        for i in X:
+            a = knn.predict([i[1:]])[0]
+            l.append(a)
+        s["result"]=l
+        k = str(s)
+        k = k.replace("'", '"')
+        return k
+    except Exception:
+        s["result"] = ["Erro inesperado"]
+        k = str(s)
+        k = k.replace("'", '"')
+        return k
+

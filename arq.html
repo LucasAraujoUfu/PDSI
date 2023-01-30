@@ -11,10 +11,31 @@
 <body>
     <div class="container">
         <form action="localhost:8000/consultAll" method="get">
-            <label for="dataset">Escolha a turma:</label>
-            <input type="file" name="dataset" id="dataset">
-            <input type="submit" value="Enviar">
+            <label for="dataset">Cole o link da turma:</label>
+            <input type="text" name="dataset" id="dataset">
+            <div class="btn btn-primary" id="env">Enviar</div>
         </form>
+
+        <span id="resp"></span>
+
     </div>
 </body>
+<script>
+
+    function enviar(){
+        link = document.getElementById('dataset');
+        url = 'http://127.0.0.1:8000/consultAll?dataset='+link.value;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", url, false);
+        xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+        h = xhttp.responseText
+        spn = document.getElementById("resp")
+        console.log(h)
+        spn.textContent = h
+    }
+    env = document.getElementById("env")
+    env.addEventListener("click",enviar)
+</script>
+
 </html>

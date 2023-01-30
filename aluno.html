@@ -276,7 +276,8 @@
         xhttp.open("GET", url, false);
         xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
 
-        console.log(xhttp.responseText);
+        if(xhttp.responseText=='1')alert("evasor")
+        else alert("não evasor")
         
     }
     
